@@ -310,14 +310,30 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "dbTable",
 			"id": "ba3449a7-2f82-4194-b759-8ad2837663fb",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{token_prod}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        OrgID        int                 `json:\"orgId\"`\r\n        TenantID     int                 `json:\"tenantId\"`\r\n        Databasetype string              `json:\"databaseType\"`\r\n        DatabaseName string              `json:\"databaseName\"`\r\n        Tables       map[string][]string `json:\"tables\"`\r\n        InstanceId   string              `json:\"instanceId\"`\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/dbTable"
 			},
 			"response": []
 		}
