@@ -308,6 +308,18 @@
 				"url": "{{base_url_prod}}/api/v1/databaseService/dbUser"
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "ba3449a7-2f82-4194-b759-8ad2837663fb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
