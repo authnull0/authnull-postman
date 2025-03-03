@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "344c3746-3993-4642-9759-b16fd8a5b582",
+		"name": "Production",
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTenantNames",
+			"id": "66bc3d7d-c21f-46aa-b1bd-836b47266904",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/getTenantNames"
+			},
+			"response": []
+		},
+		{
+			"name": "getTableFields",
+			"id": "10955df2-c04f-4acd-ae99-70967c014fd1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1,\r\n  \"tenantName\":\"authnull_dev\",\r\n  \"tableNames\":[\"db_privilege\",\"db_user\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/getTableFields"
+			},
+			"response": []
+		},
+		{
+			"name": "listUser",
+			"id": "00b94fab-dac0-4526-8d98-baa5828d6c52",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{token_prod}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1,\r\n  \"filters\":[],\r\n  \"requestId\":\"\",\r\n  \"limit\":10,\r\n  \"page_id\":1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/listUser"
+			},
+			"response": []
+		},
+		{
+			"name": "getRoles",
+			"id": "420a1f0b-6b03-4119-a682-4c4e600e90e0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/getRoles"
+			},
+			"response": []
+		},
+		{
+			"name": "getUniqueUsernames",
+			"id": "1ed7586c-0fac-4fb3-af6f-543620772fdc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1,\r\n  \"filter\":[],\r\n  \"requestId\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/getUniqueUsernames"
+			},
+			"response": []
+		},
+		{
+			"name": "getTableNames",
+			"id": "fdb0c679-4c82-4138-a28e-6da1d978b231",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgId\":105,\r\n    \"tenantId\":1,\r\n    \"tenantName\":\"brcm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/getTableNames"
+			},
+			"response": []
+		},
+		{
+			"name": "getUniqueDatabasenames",
+			"id": "2845ef26-53ed-47b6-8267-9aaffdb2c3b6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgId\":105,\r\n    \"tenantId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/getUniqueDatabasenames"
+			},
+			"response": []
+		},
+		{
+			"name": "listDatabase",
+			"id": "7b666832-8ae6-4e8e-998e-bb034255b538",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{token_prod}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1,\r\n  \"filters\":[],\r\n  \"requestId\":\"\",\r\n  \"limit\":10,\r\n  \"page_id\":1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/listDatabase"
+			},
+			"response": []
+		},
+		{
+			"name": "listUserPrivilege",
+			"id": "74f38e39-12c9-4761-a7d5-acf28b3f9ac7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{token_prod}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"orgId\": 105,\r\n  \"tenantId\": 1,\r\n  \"filters\":[],\r\n  \"requestId\":\"\",\r\n  \"limit\":10,\r\n  \"page_id\":1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/listUserPrivilege"
+			},
+			"response": []
+		},
+		{
+			"name": "registerDbAgent",
+			"id": "efae0933-bcab-418c-b514-7e881d1a7a76",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgId\":105,\r\n    \"tenantId\":1,\r\n    \"machineKey\":\"LINUX03\",\r\n    \"os\":1,\r\n    \"status\":\"ACTIVE\",\r\n    \"uuid\":\"\",\r\n    \"publicIp\":\"13.82.195.5\",\r\n    \"instanceName\":\"TEST2VM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/registerDbAgent"
+			},
+			"response": []
+		},
+		{
+			"name": "updateLastActive",
+			"id": "639d0a74-c184-4bd4-83fe-ff3050577442",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgId\":105,\r\n    \"tenantId\":1,\r\n    \"instanceId\":\"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/updateLastActive"
+			},
+			"response": []
+		},
+		{
+			"name": "dbSync",
+			"id": "3c0c6876-f604-415b-9692-0c5921214d8a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orgId\":105,\r\n\"tenantId\":1,\r\n\"databaseType\":\"mysql\",\r\n\"databaseName\":\"test\",\r\n\"host\":\"localhost\",\r\n\"port\":\"3306\",\r\n\"status\":\"Active\",\r\n\"uuid\":\"1122-333\",\r\n\"instanceId\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/dbSync"
+			},
+			"response": []
+		},
+		{
+			"name": "dbUser",
+			"id": "d01b212f-6d96-4175-9183-c8e91ec303b6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"orgId\":105,\r\n\"tenantId\":1,\r\n\"databaseType\":\"mysql\",\r\n\"databaseName\":\"test\",\r\n\"status\":\"Active\",\r\n\"username\":\"admin\",\r\n\"privilege\":\"User\",\r\n\"host\":\"localhost\",\r\n\"role\":\"user\",\r\n\"instanceId\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url_prod}}/api/v1/databaseService/dbUser"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "ba3449a7-2f82-4194-b759-8ad2837663fb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
