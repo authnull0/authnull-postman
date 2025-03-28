@@ -1,60 +1,71 @@
 {
 	"info": {
-		"_postman_id": "6945f102-a5a0-4860-9651-3551ae87d2a7",
+		"_postman_id": "58a08a1b-1398-4aac-9ad5-2ce6a3fdb347",
 		"name": "Development",
-		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18708384"
 	},
 	"item": [
 		{
 			"name": "getTenantNames",
-			"id": "2920d64c-bbda-451e-9aff-baca021096c5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/getTenantNames"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/getTenantNames",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"getTenantNames"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "getTableFields",
-			"id": "362ae2fa-2764-49de-9986-6c77d526b96e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1,\r\n  \"tenantName\":\"authnull_dev\",\r\n  \"tableNames\":[\"db_privilege\",\"db_user\"]\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"tenantName\": \"authnull_dev\",\r\n    \"tableNames\": [\r\n        \"db_privilege\",\r\n        \"db_user\"\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/getTableFields"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/getTableFields",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"getTableFields"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "listUser",
-			"id": "bd38f490-7137-4936-ab6c-d87555b12efe",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [
@@ -66,111 +77,146 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1,\r\n  \"filters\":[],\r\n  \"requestId\":\"\",\r\n  \"limit\":10,\r\n  \"page_id\":1\r\n}\r\n",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"filters\": [],\r\n    \"requestId\": \"\",\r\n    \"limit\": 10,\r\n    \"page_id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/listUser"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/listUser",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"listUser"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "getRoles",
-			"id": "7c3958ac-c1e5-4d0a-996e-a1dd9efb2003",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/getRoles"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/getRoles",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"getRoles"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "getUniqueUsernames",
-			"id": "e957239b-7a8b-46ae-86df-e70075732688",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1,\r\n  \"filter\":[],\r\n  \"requestId\":\"\"\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"filter\": [],\r\n    \"requestId\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/getUniqueUsernames"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/getUniqueUsernames",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"getUniqueUsernames"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "getTableNames",
-			"id": "2679d87a-1bb8-438d-bfae-0b346454bb31",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orgId\":1,\r\n    \"tenantId\":1,\r\n    \"tenantName\":\"devsetup\"\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"tenantName\": \"devsetup\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/getTableNames"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/getTableNames",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"getTableNames"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "getUniqueDatabasenames",
-			"id": "043821b8-502f-4428-bc55-a0ec69e3091d",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orgId\":1,\r\n    \"tenantId\":1\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/getUniqueDatabasenames"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/getUniqueDatabasenames",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"getUniqueDatabasenames"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "listDatabase",
-			"id": "07952a3c-91ca-42d8-ace6-de1ef0f51b17",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [
@@ -182,23 +228,30 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1,\r\n  \"filters\":[],\r\n  \"requestId\":\"\",\r\n  \"limit\":10,\r\n  \"page_id\":1\r\n}\r\n",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"filters\": [],\r\n    \"requestId\": \"\",\r\n    \"limit\": 10,\r\n    \"page_id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/listDatabase"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/listDatabase",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"listDatabase"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "listUserPrivilege",
-			"id": "a893e9b9-4463-46ac-b182-8645a870dea4",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [
@@ -210,111 +263,146 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"orgId\": 1,\r\n  \"tenantId\": 1,\r\n  \"filters\":[],\r\n  \"requestId\":\"\",\r\n  \"limit\":10,\r\n  \"page_id\":1\r\n}\r\n",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"filters\": [],\r\n    \"requestId\": \"\",\r\n    \"limit\": 10,\r\n    \"page_id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/listUserPrivilege"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/listUserPrivilege",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"listUserPrivilege"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "registerDbAgent",
-			"id": "e4140524-4683-4c18-86af-7fc86df7fa7f",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orgId\":1,\r\n    \"tenantId\":1,\r\n    \"machineKey\":\"LINUX03\",\r\n    \"os\":1,\r\n    \"status\":\"ACTIVE\",\r\n    \"uuid\":\"\",\r\n    \"publicIp\":\"13.82.195.5\",\r\n    \"instanceName\":\"TEST2VM\"\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"machineKey\": \"LINUX03\",\r\n    \"os\": 1,\r\n    \"status\": \"ACTIVE\",\r\n    \"uuid\": \"\",\r\n    \"publicIp\": \"13.82.195.5\",\r\n    \"instanceName\": \"TEST2VM\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/registerDbAgent"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/registerDbAgent",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"registerDbAgent"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "updateLastActive",
-			"id": "68418f13-5a2f-42ca-b8fc-f8c1eaab49b5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"orgId\":1,\r\n    \"tenantId\":1,\r\n    \"instanceId\":\"\"\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"instanceId\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/updateLastActive"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/updateLastActive",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"updateLastActive"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "dbSync",
-			"id": "bad95eb5-185a-4331-91a1-723aafce0845",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"orgId\":1,\r\n\"tenantId\":1,\r\n\"databaseType\":\"mysql\",\r\n\"databaseName\":\"test\",\r\n\"host\":\"localhost\",\r\n\"port\":\"3306\",\r\n\"status\":\"Active\",\r\n\"uuid\":\"1122-333\",\r\n\"instanceId\":\"\"\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"databaseType\": \"mysql\",\r\n    \"databaseName\": \"test\",\r\n    \"host\": \"localhost\",\r\n    \"port\": \"3306\",\r\n    \"status\": \"Active\",\r\n    \"uuid\": \"1122-333\",\r\n    \"instanceId\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/dbSync"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/dbSync",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"dbSync"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "dbUser",
-			"id": "3e7c2d6e-7e6d-471a-b1ca-83b481b28f52",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"orgId\":1,\r\n\"tenantId\":1,\r\n\"databaseId\":1,\r\n\"userName\":\"admin\",\r\n\"role\":\"user\",\r\n\"host\":\"localhost\",\r\n\"port\":\"3306\",\r\n\"status\":\"Active\",\r\n\"instanceId\":\"\"\r\n}",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"databaseId\": 1,\r\n    \"userName\": \"admin\",\r\n    \"role\": \"user\",\r\n    \"host\": \"localhost\",\r\n    \"port\": \"3306\",\r\n    \"status\": \"Active\",\r\n    \"instanceId\": \"\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/dbUser"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/dbUser",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"dbUser"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "dbTable",
-			"id": "4bb17a8d-a98d-4a11-a88a-06ada9059187",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "POST",
 				"header": [
@@ -326,16 +414,91 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        OrgID        int                 `json:\"orgId\"`\r\n        TenantID     int                 `json:\"tenantId\"`\r\n        Databasetype string              `json:\"databaseType\"`\r\n        DatabaseName string              `json:\"databaseName\"`\r\n        Tables       map[string][]string `json:\"tables\"`\r\n        InstanceId   string              `json:\"instanceId\"`\r\n}",
+					"raw": "{\r\n    \"orgId\": 123,\r\n    \"tenantId\": 456,\r\n    \"databaseType\": \"PostgreSQL\",\r\n    \"databaseName\": \"example_db\",\r\n    \"tables\": {\r\n        \"table1\": [\r\n            \"field1\",\r\n            \"field2\"\r\n        ],\r\n        \"table2\": [\r\n            \"field1\",\r\n            \"field2\"\r\n        ]\r\n    },\r\n    \"instanceId\": \"1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "{{base_url_dev}}/api/v1/databaseService/dbTable"
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/dbTable",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"dbTable"
+					]
+				}
 			},
 			"response": []
+		},
+		{
+			"name": "listConnections",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgId\": 1,\r\n    \"tenantId\": 1,\r\n    \"limit\": 5,\r\n    \"pageId\": 1,\r\n    \"filters\": [\r\n        {\r\n            \"filterParameter\": \"user\",\r\n            \"filterValue\": \"ritam\"\r\n        },\r\n        {\r\n            \"filterParameter\": \"privilege\",\r\n            \"filterValue\": \"READ\"\r\n        },\r\n        {\r\n            \"filterParameter\": \"host\",\r\n            \"filterValue\": \"localhost\"\r\n        },\r\n        {\r\n            \"filterParameter\": \"database_name\",\r\n            \"filterValue\": \"test\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url_dev}}/api/v1/databaseService/listConnections",
+					"host": [
+						"{{base_url_dev}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"databaseService",
+						"listConnections"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url_dev",
+			"value": "https://dev.api.authnull.com",
+			"type": "default"
 		}
 	]
 }
